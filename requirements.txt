@@ -1,0 +1,18 @@
+# --- Web & API ---
+django==5.1.4
+django-filter==25.1
+djangorestframework-jsonapi==7.1.0
+gunicorn==23.0.0
+
+# --- Code & Style ---
+flake8==7.3.0
+flake8-isort==6.1.2
+flake8-pyproject==1.2.3
+
+# --- Database ---
+psycopg[binary]==3.1.*
+
+# --- Other ---
+pytest==8.4.1
+pytest-django==4.11.1
+python-dotenv==1.1.1

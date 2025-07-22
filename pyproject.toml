@@ -1,0 +1,17 @@
+[project]
+name = 'b2broker_test'
+version = '0.1.0'
+description = 'Wallet API'
+readme = 'README.md'
+requires-python = '>=3.11'
+
+[tool.flake8]
+max-line-length = 100
+exclude = 'venv,wallet_api/api/migrations'
+select = ['E', 'F', 'W', 'I']
+
+[tool.pytest.ini_options]
+pythonpath = './wallet_api'
+DJANGO_SETTINGS_MODULE = 'wallet_api.settings'
+python_files = 'tests.py test_*.py *_tests.py'
+addopts = '-ra -q'

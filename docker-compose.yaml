@@ -1,0 +1,29 @@
+volumes:
+  postgre_database:
+
+networks:
+  b2broker:
+    driver: bridge
+
+services:
+  database:
+    image:  postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgre_database:/var/lib/postgresql/data
+    networks:
+      - b2broker
+
+  wallet:
+    build: .
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - '8000:8000'
+    networks:
+      - b2broker
