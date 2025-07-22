@@ -8,8 +8,8 @@ Simple Django + DRF project for the B2Broker test task.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/anushST/b2broker_test_task.git
-cd b2broker_test_task
+git clone https://github.com/anushST/b2broker_test.git
+cd b2broker_test
 
 # 2. Copy env settings (edit if you need)
 cp .env.example .env
